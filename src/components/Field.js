@@ -1,11 +1,13 @@
-import react from 'react';
+import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import params from '../Params';
+import Mines from './Mines';
 
 export default props => {
-  const {mined, opened, nearMines} = props;
-  const styleField = [style.field];
+  const {mined, opened, nearMines, exploded} = props;
+  const styleField = [styles.field];
   if (opened) styleField.push = [styles.opened];
+  if (exploded) styleField.push(styles.exploded);
   if (styleField.lenght === 1) styleField.push(styles.regular);
 
   let color = null;
@@ -23,6 +25,7 @@ export default props => {
       ) : (
         false
       )}
+      {mined && opened ? <Mines /> : false}
     </View>
   );
 };
@@ -49,4 +52,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: params.fontSize,
   },
+  exploded: {},
 });
