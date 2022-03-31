@@ -5,7 +5,7 @@ return Array(rows).fill(0).map((_, row)=>{
       row,
       column,
       opened: false,
-      flagged: false,
+      marked: false,
       mined: false,
       exploded: false,
       nearMines: 0,

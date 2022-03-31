@@ -49,13 +49,15 @@ const styles = StyleSheet.create({
     width: params.blockSize,
   },
   regular: {
+    borderWidth: 4,
     backgroundColor: '#999',
     borderLeftColor: '#CCC',
-    borderTopColor: '#CCC',
+    borderTopColor: 'black',
     borderRightColor: '#333',
     borderBottomColor: '#333',
   },
   opened: {
+    borderWidth: 3,
     backgroundColor: '#999',
     borderColor: '#777',
     alignItems: 'center',
