@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   pole: {
-    position:'relative',
+    position: 'relative',
     height: 20,
     width: 9,
     backgroundColor: 'black',

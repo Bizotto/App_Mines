@@ -5,7 +5,7 @@ return Array(rows).fill(0).map((_, row)=>{
       row,
       column,
       opened: false,
-      flaged: false,
+      flagged: false,
       mined: false,
       exploded: false,
       nearMines: 0,
@@ -15,8 +15,8 @@ return Array(rows).fill(0).map((_, row)=>{
 };
 
 const spreadMines =(board, minesAmount) =>{
-  const rows = board.lenght
-  const columns = board[0].lenght
+  const rows = board.length
+  const columns = board[0].length
   let minesPlanted = 0
   while (minesPlanted < minesAmount) {
     const rowSel = parseInt(Math.random()* rows, 10 )
@@ -27,3 +27,12 @@ const spreadMines =(board, minesAmount) =>{
     }
   } 
 }
+
+
+const createMinedBoard =(rows,columns,minesAmount)=>{
+  const board = createBoard(rows, columns)
+  spreadMines(board , minesAmount)
+  return board
+}
+
+export { createMinedBoard }
